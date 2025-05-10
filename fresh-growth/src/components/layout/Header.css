@@ -1,0 +1,45 @@
+/* Header.css */
+
+/* General Hover Effect for Nav Items */
+.nav-link-custom {
+  position: relative;
+  color: #304050 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #1c3d8e !important;
+}
+
+/* Underline effect for nav items */
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #1c3d8e;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+/* Hover Effect for "FRESHGROWTH" Brand Title */
+.brand-title:hover span {
+  color: #1c3d8e; /* Change title color on hover */
+  cursor: pointer;
+}
+
+/* Hover Effect for Get Started Button */
+.get-started-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #f0642c;
+  transform: scale(1.05);
+  cursor: pointer;
+}

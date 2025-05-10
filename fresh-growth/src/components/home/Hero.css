@@ -1,0 +1,114 @@
+/* Hero.css */
+
+/* Background Image */
+.hero-section {
+  min-height: 100vh;
+  background-image: url("../../assets/hero-bg.png"); /* Adjust the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay for readability */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Content wrapper stays above overlay */
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Styling */
+.hero-card {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  padding: 40px 30px;
+  backdrop-filter: blur(4px);
+  border: none;
+}
+
+/* Heading */
+.hero-heading {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #1c3d8e;
+  margin-bottom: 20px;
+}
+
+/* Subheading */
+.hero-subheading {
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #304050;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+.hero-buttons .hero-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 6px;
+  min-width: 150px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.hero-btn.primary-btn {
+  background-color: #ff7e5f;
+  color: #fff;
+  border: none;
+}
+
+.hero-btn.primary-btn:hover {
+  background-color: #ff6543;
+}
+
+.hero-btn.secondary-btn {
+  background-color: transparent;
+  color: #1c3d8e;
+  border: 2px solid #1c3d8e;
+}
+
+.hero-btn.secondary-btn:hover {
+  background-color: #1c3d8e;
+  color: #fff;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .hero-subheading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+}
