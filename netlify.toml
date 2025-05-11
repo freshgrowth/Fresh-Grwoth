@@ -1,0 +1,20 @@
+# netlify.toml
+# This file should be placed in the root of your project
+
+[build]
+  # Set the base directory to the root of your project where package.json is located
+  base = "/"
+  # Command to build your site - adjust this based on your actual build command
+  command = "npm run build"
+  # Directory that contains the deploy-ready HTML files and assets
+  publish = "build"  # Update this if your build outputs to a different directory like "dist" or "public"
+
+# Environment variable settings (optional)
+[build.environment]
+  NODE_VERSION = "18"  # Specify Node.js version - adjust as needed
+
+# Redirects and headers can be added as needed
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
